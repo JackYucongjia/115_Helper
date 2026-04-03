@@ -1,0 +1,8 @@
+fastapi
+uvicorn[standard]
+p115client
+httpx
+websockets
+pydantic
+qrcode[pil]
+python-multipart

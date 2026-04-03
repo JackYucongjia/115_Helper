@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  115-helper:
+    build: .
+    container_name: 115-helper
+    ports:
+      - "8115:8115"
+    volumes:
+      - ./data:/app/data   # Cookie 持久化存储
+    environment:
+      - HOST=0.0.0.0
+      - PORT=8115
+      - DATA_DIR=/app/data
+      - COOKIE_PATH=/app/data/115-cookies.txt
+    restart: unless-stopped
